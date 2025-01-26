@@ -1,0 +1,111 @@
+/*Reset*/
+
+@media(max-width:768px) {
+    body{
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .menu{
+        flex-direction: column;
+    }
+}
+
+body,h1,h2,h3,p,ul,li,a,form,input,
+textarea,button{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+/*Container*/
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*cabeçalho*/
+
+.header{
+    background: #4CAF50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.header .menu{
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.header .menu a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*banner*/
+
+.banner{
+    background: url('f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.banner h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.banner .bnt{
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/*seções*/
+
+section{
+    padding: 40px 0;
+    text-align: center;
+}
+.produtos .produtos-lista{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.produto-item{
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/*contato*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form input,form textarea, form button{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/*rodapé*/
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
