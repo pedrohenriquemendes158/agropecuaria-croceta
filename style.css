@@ -87,7 +87,16 @@ section{
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   
 }
+
+.produto-item img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+
 /*contato*/
 
 form{
@@ -177,11 +186,14 @@ p{
     color: white;
     background-color: #007bff;
     padding: 10px 20px;
-    border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3 ease, transform 0.2;
 }
 .location-link:hover{
     background-color: #0056b3;
     transform: scale(1.05);
+}
+
+body {
+    overflow-x: hidden;
 }
