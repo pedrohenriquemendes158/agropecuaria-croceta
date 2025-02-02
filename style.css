@@ -24,7 +24,11 @@ body{
 }
 /*Container*/
 
-
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /*cabeçalho*/
 
 .header{
@@ -189,6 +193,40 @@ p{
     background-color: #0056b3;
     transform: scale(1.05);
 }
+
+
+.produto-carrossel{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carrossel-container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrossel-item{
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.carrossel-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+
 
 body {
     overflow-x: hidden;
