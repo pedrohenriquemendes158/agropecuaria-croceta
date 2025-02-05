@@ -9,4 +9,3 @@ document.getElementById('voltar-inicio').addEventListener('click', () =>{
     document.getElementById('inicio').style.display = 'block'
 
 });
-
