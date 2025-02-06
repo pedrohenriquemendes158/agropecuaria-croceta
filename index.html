@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cachaça Lajeado</title>
   <link rel="stylesheet" href=style.css>
-
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -13,30 +14,31 @@
     <!--cabeçalho-->
 
  <header class="header">
+   <nav class="navbar navbar-expand-lg navbar-dark ">
     <div class="container">
-        <h1>Cachaça Lajeado</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="#sobre">Sobre nós</a>
-                </li>
-                <li><a href="#produto">Produtos</a>
-                </li>
-                <li><a href="#receitas">Receitas</a>
-                </li>
-                <li><a href="#contato">Contato</a>
-                </li>
+        <a class="navbar-brand" href="#">Cachaça Lageado</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class=nav-link href="#sobre">Sobre nós</a></li>
+                <li class="nav-item"><a class=nav-link href="#produtos">Produtos</a></li>
+                <li class="nav-item"><a class=nav-link href="#receitas">Receitas</a></li>
+                <li class="nav-item"><a class=nav-link href="#contato">Contato</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
+   </nav>
  </header>
 
  <!-- banner principal-->
 
-  <section class="banner">
+  <section class="banner d-flex justfy-content-center aling-items-center text-center text-white">
     <div class="container">
-        <h2>A tradição da Cachaça Engarrafada</h2>
-        <p>Produzida com paixão e qualidade desde 1948</p>
-        <a href="#produto" class="btn">
+        <h2 class="display-4">A tradição da Cachaça Engarrafada</h2>
+        <p class="lead">Produzida com paixão e qualidade desde 1948</p>
+        <a href="#produto" class="btn btn-success btn-lg">
             Conheça nossos produtos
         </a>
   </div>
@@ -73,34 +75,75 @@ partes do mundo, levando a autenticidade da cachaça brasileira para os apreciad
 Cachaçaria Ouro Brasil – Um sabor que atravessa gerações.
         </p>
     </div>
+
 </section>
 
 <!--Produtos-->
 
-<section id="produto" class="produto">
-    <div class="container">
-        <h2>Nossos Produtos</h2>
-        <div class="produto-lista">
-            <div class="produto-item">
-                <h3>Cachaça Prata</h3>
-
-                <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" alt="">
-                
-                <p>Teor alcoolíco 40% | Notas de sabor: Suave refrescante</p>
+<div class="modal fade" id="detalhesModal" tabindex="-1" aria-labelledby="detalhesModalLabel"aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detalhesModalLabel">Detalhes do Produto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-            <div class="produto-item">
-                <h3>Cachaça Envelhecida</h3>
-                <img src="/fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" alt="">
-                <p>Teor alcoolíco 40% | Notas de sabor: Baunilha e madeira</p>
+            <div class="modal-body">
+                <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" class="img-fluid mb-3" alt="Imagem do Produto" id="modalImagem">
+                <h3 id="modalTitulo"></h3>
+                <p id="modalDescricao"></p>
+                <p><strong>Teor Alcoólico:</strong><span id="modalTeor"></span></p>
+                <p><strong>Notas de Sabor:</strong><span id="modalNotas"></span></p>
             </div>
-
-            <div class="produto-item">
-                <h3>Edições Limitadas</h3>
-                <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" alt="">
-                <p>Sabores Exclusivos Envelhecimentos Únicos</p>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
+    </div>
+</div>
+
+
+<section id="produto" class="produto py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Nossos Produtos</h2>
+        <div class="row">
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" class="card-img-top" alt="Cachaça Prata">
+                    <div class="card-body">
+                        <h3 class=" card-title">Cachaça Prata</h3>
+                        <p clas=" card-tex">Teor alcoólico 40% | Notas de sabor: Suave e Refrescante</p>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#detalhesModal"
+                        onclick="carregarDetalhes('fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg', 'Cachaça Prata','Uma cachaça suave e refrescante.','40%','Suave e refrescante')">Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" class="card-img-top" alt="Cachaça Prata">
+                    <div class="card-body">
+                        <h3 class=" card-title">Cachaça Envelhecida</h3>
+                        <p clas=" card-tex">Teor alcoólico 40% | Notas de sabor: Baunilha e madeira</p>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#detalhesModal"
+                        onclick="carregarDetalhes('fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg', 'Cachaça Prata','Uma cachaça suave e refrescante.','40%','Suave e refrescante')">Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" class="card-img-top" alt="Cachaça Prata">
+                    <div class="card-body">
+                        <h3 class=" card-title">Cachaça Canela</h3>
+                        <p clas=" card-tex">Teor alcoólico 40% | Notas de sabor: Leve Aroma de Canela</p>
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#detalhesModal"
+                        onclick="carregarDetalhes('fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg', 'Cachaça Prata','Uma cachaça suave e refrescante.','40%','Suave e refrescante')">Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 </section>
 
@@ -136,6 +179,20 @@ Cachaçaria Ouro Brasil – Um sabor que atravessa gerações.
                     <p class="text">Descrição do Produto 3.</p>
                     <p class="preco">R$ 90,00</p>
         </div>
+
+        <div class="produto-pagina">
+            <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" alt="Produto 3">
+            <h3 class="cat">Produto 4.</h3>
+            <p class="text">Descrição do Produto 4.</p>
+            <p class="preco">R$ 90,00</p>
+</div>
+
+<div class="produto-pagina">
+    <img src="fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg" alt="Produto 3">
+    <h3 class="cat">Produto 5.</h3>
+    <p class="text">Descrição do Produto 5.</p>
+    <p class="preco">R$ 90,00</p>
+</div>
     </div>
     <button id="voltar-inicio">Voltar para o Início</button>
 </section>
@@ -205,7 +262,7 @@ Cachaçaria Ouro Brasil – Um sabor que atravessa gerações.
 
 <!--Rodapé-->
 
-<footer class="footer">
+<footer class="bg-dark text-white text-center py-3">
     <div class="container">
         <p>&copy; 2025 Cachaça Artesanal.
             Todos os direitos reservados. 
@@ -213,6 +270,10 @@ Cachaçaria Ouro Brasil – Um sabor que atravessa gerações.
     </div>
 </footer>
 
+
+<!-- Bootstrap JS e Dependências -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 <script src="javascript/script.js"></script>
 </body>
 </html>
