@@ -32,6 +32,82 @@
    </nav>
  </header>
 
+ <!--Botão de revendedor-->
+ <style>
+    
+.btn-revendedor{
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: #28a745;
+    border: none;
+}
+.btn-revendedor:hover{
+    background-color: #218838;
+}
+ </style>
+
+ <button class="btn btn-revendedor" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRevendedor">
+    Trabalhe Conosco
+ </button>
+
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRevendedor" aria-labelledby="offcanvasRevendedorLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRevendedorLabel">Seja um Revendedor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>Junte-se à nossa rede de revendedores e ganhe dinheiro revendendo nossos produtos.</p>
+        <h6>Benefícios</h6>
+        <ul class="list-group">
+            <li class="list-group-item">Lucro garantido</li>
+            <li class="list-group-item">Treinamento completo</li>
+            <li class="list-group-item">Suporte personalizado</li>
+            <li class="list-group-item">condições especiais de pagamento</li>
+        </ul>
+
+        <hr>
+
+        <h6>Cadastre-se agora</h6>
+
+        <form id="formRevendedor">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" placeholder="Sua cidade" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="experiencia" class="form-label">Tem experiência com vendas?</label>
+                <select class="form-select" id="experiencia" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+
+            </div>
+            <button type="submit" class="btn btn-success">Enviar Cadastro</button>
+        </form>
+    </div>
+ </div>
+
  <!-- banner principal-->
 
   <section class="banner d-flex justfy-content-center aling-items-center text-center text-white">
@@ -78,6 +154,7 @@ Cachaçaria Ouro Brasil – Um sabor que atravessa gerações.
 
     
 </section>
+
 
 <!--Produtos-->
 
@@ -247,14 +324,15 @@ Cachaçaria Ouro Brasil – Um sabor que atravessa gerações.
     <!--Botões flutuantes-->
 
 <div class="floating-buttons">
-    <a href="https://wa.me/SEU_NUMERO" target="_blank"
+    <a href="https://wa.me/554396465575?text=Olá%20gostaria%20saber%20mais" target="_blank"
     class="Whatsapp-btn" aria-label="WhatsApp">
 
+         
     <img
     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
-    <a href="https://instagram.com//SEU_PERFIL" 
+    <a href="https://instagram.com/medes_pedro" 
         target="_blank" class="instagram-btn" 
         aria-label="Instagram">
         <img

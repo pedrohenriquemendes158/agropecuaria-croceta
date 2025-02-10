@@ -17,3 +17,28 @@ function carregarDetalhes(imagem,titulo,descricao,teor,notas){
     document.getElementById('modalTeor').innerText = teor;
     document.getElementById('modalNotas').innerText = notas;
 }
+
+document.getElementById('formRevendedor').addEventListener('submit', function (e){
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const telefone = document.getElementById('telefone').value;
+    const email = document.getElementById('email').value;
+    const cidade= document.getElementById('cidade').value;
+    const experiencia = document.getElementById('experiencia').value;
+
+    const mensagem = `Olá, gostariade me cadastrar como revendedor!\n\n`+
+    `*Nome*:${nome}\n`+
+    `*Telefone*:${telefone}\n`+
+    `*E-mail*:${email}\n`+
+    `*Cidade*:${cidade}\n`+
+    `*Experiência com vendas*:${experiencia}\n;`
+
+    const mensagemCodificada = encodeURIComponent(mensagem);
+
+    const numeroWhatsApp = '5543996465575';
+
+    const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada};`
+
+    window.open(linkWhatsApp,'_blank');
+});
