@@ -84,7 +84,7 @@ body{
 /*banner*/
 
 .banner{
-    background: url('fotos/f7bf70d0-e51d-48e5-809a-e25c58f08db8.jpg') no-repeat center center/cover;
+    background: url('fotos/banner-moderno.jpg') no-repeat center center/cover;
     height: 300px;
     display: flex;
     justify-content: center;
